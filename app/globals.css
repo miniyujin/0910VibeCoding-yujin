@@ -1,11 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* 딥 크림슨 — 면·테두리용. 검정 위 글자로 쓰면 대비가 부족하다 */
-  --color-crimson: #862633;
-  /* 밝은 크림슨 — 검정 배경 위 글자·링크용 */
-  --color-crimson-lit: #d93b54;
+  /* 밤의 도시 팔레트 */
+  --color-ink: #150c2e;
+  --color-grape: #2b1350;
+  --color-night: #0f0824;
+  --color-abyss: #04121d;
+  --color-cream: #fff6e5;
+  --color-pink: #ff4d8d;
+  --color-teal: #38d9d9;
+  --color-tangerine: #ff9f45;
+  --color-butter: #ffe27a;
+  --color-plum: #7b1f63;
 
-  /* Geist에는 한글이 없어 시스템 폰트로 자연스럽게 넘어가도록 fallback 을 둔다 */
-  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  /* 폰트는 layout.tsx 의 <link> 로 불러온다.
+     Bagel Fat One / Noto Sans KR 은 next/font 데이터에 한국어 subset 이 없어
+     Google Fonts 를 직접 링크해야 한글 글리프가 따라온다. */
+  --font-sans: "Noto Sans KR", system-ui, sans-serif;
+  --font-display: "Bagel Fat One", system-ui, cursive;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+  --font-serif: "Bodoni Moda", Georgia, serif;
 }
