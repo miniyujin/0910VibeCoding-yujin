@@ -1,26 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* 딥 크림슨 — 면·테두리용. 검정 위 글자로 쓰면 대비가 부족하다 */
+  --color-crimson: #862633;
+  /* 밝은 크림슨 — 검정 배경 위 글자·링크용 */
+  --color-crimson-lit: #d93b54;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Geist에는 한글이 없어 시스템 폰트로 자연스럽게 넘어가도록 fallback 을 둔다 */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
 }
